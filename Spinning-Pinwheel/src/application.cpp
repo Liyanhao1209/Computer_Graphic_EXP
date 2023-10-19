@@ -1,16 +1,3 @@
-/*
-*  Function:
-    1. void reverse()：风车旋转变向；
-    2. void speedUp()：增大旋转速度；
-    3. void speedDown()：降低旋转速度；
-    4. void rotate()：旋转；
-    5. void printCharater(const char* str)：按钮上显示文字；
-    6. struct button：按钮部分，模拟button点击效果；
-    7. void mouseFunc(GLint btn, GLint sta, int x, int y)：按钮和鼠标交互；
-    8. void subFunc(GLint data)//void creatMenu()：右键菜单；
-    9. void keyBoard(unsigned char key, int x, int y)：键盘交互；
-    10. void drawPinwheel()：风车部分；
-*/
 #include <iostream>
 #define GLEW_STATIC
 #include <GL/glew.h>
@@ -25,11 +12,8 @@ using namespace std;
 
 double angle = 0;
 int direction = 1;
-double speed = 0.3;
-double Acceleration = 0.3;
-
-
-
+double speed = 0.5;
+double Acceleration = 0.25;
 
 
 void reverse()
@@ -60,8 +44,6 @@ void rotate()
     if (angle > 360) angle = 0;
     glutPostRedisplay();
 }
-
-//button part
 
 void printCharater(const char* str,float labelX,float labelY)
 {
@@ -104,9 +86,10 @@ button *reverseBtn,*speedUpBtn,*speedDownBtn;
 
 void mouseFunc(GLint btn, GLint sta, int x, int y)
 {
-    int rxl, rxr, ryb, ryt,
-        suxl,suxr,suyb,suyt,
-        sdxl,sdxr,sdyb,sdyt;
+    int size = 700;
+    int rxl = size/2-size*0.1, rxr=size/2+size*0.1, yb=size*0.05, yt=size*0.1,
+        suxl=size*0.2,suxr=size*0.35,
+        sdxl=size*0.65,sdxr=size*0.8;
 
 
     if (btn == GLUT_LEFT_BUTTON)
@@ -114,57 +97,42 @@ void mouseFunc(GLint btn, GLint sta, int x, int y)
         {
         case GLUT_DOWN:
         {
-            if (x >= 360 && x <= 440 && y >= 40 && y <= 80) {
-                reverse();
-                reverseBtn->cleck = true;
+            if (y >= yb && y <= yt) {
+                if (x >= rxl && x <= rxr) {
+                    reverse();
+                    reverseBtn->cleck = true;
+                }
+                else if (x >= suxl && x <= suxr) {
+                    speedUp();
+                    speedUpBtn->cleck = true;
+                }
+                else if (x >= sdxl && x <= sdxr) {
+                    speedDown();
+                    speedDownBtn->cleck = true;
+                }
             }
             break;
         }
         case GLUT_UP:
         {
             reverseBtn->cleck = false;
+            speedUpBtn->cleck = false;
+            speedDownBtn->cleck = false;
         }
         }
     glutPostRedisplay();
 }
 
-
-//menu part
-void EntryAction(GLint data)
-{
-    switch (data)
-    {
-    case 1:speedUp(); break;
-    case 2:speedDown(); break;
-    case 3:reverse(); break;
-    }
-}
-
-
-void createMenu()
-{
-    //创建菜单
-    GLint sub = glutCreateMenu(EntryAction);
-    glutAddMenuEntry("Speed Up", 1);
-    glutAddMenuEntry("Speed Down", 2);
-    glutAddMenuEntry("Reverse", 3);
-    //鼠标右键唤醒菜单
-    glutAttachMenu(GLUT_RIGHT_BUTTON);
-}
-
-
-//keyboard part
 void keyBoard(unsigned char key, int x, int y)
 {
     switch (key)
     {
-    case 'q':reverse(); break;
-    case 'w':speedUp(); break;
-    case 's':speedDown(); break;
+    case 'r':reverse(); break;
+    case 'u':speedUp(); break;
+    case 'd':speedDown(); break;
     case 27:exit(0);
     }
 }
-
 
 void drawPinwheel()
 {
@@ -245,21 +213,21 @@ void drawPinwheel()
 
     glPopMatrix();
 
-    //button 
+    //按钮
     speedUpBtn->showButton(0,0,0,"Speed Up", -0.52,0.74,0.8, 0.7, -0.6, -0.3);
     reverseBtn->showButton(0, 0, 0, "Reverse",-0.06,0.74, 0.8, 0.7, -0.1, 0.1);
     speedDownBtn->showButton(0, 0, 0, "Speed Down", 0.36,0.74,0.8, 0.7, 0.3, 0.6);
 
-    glPopMatrix();
-
+    //按键提示
+    printCharater("Speed Up->U", -0.54, 0.85);
+    printCharater("Reverse->R", -0.06, 0.85);
+    printCharater("Speed Down->D", 0.34, 0.85);
 
 
     glFlush();
     glutSwapBuffers();
 }
 
-
-//initialize
 void Init()
 {
     glEnable(GL_DEPTH_TEST);
@@ -290,7 +258,6 @@ int main(int argc, char* argv[])
     glEnable(GL_DEPTH_TEST | GL_LINE_SMOOTH | GL_POLYGON_SMOOTH | GL_POLYGON_STIPPLE);
 
     Init();
-    createMenu();
     glutDisplayFunc(&drawPinwheel);
     glutIdleFunc(&rotate);
     glutKeyboardUpFunc(&keyBoard);
