@@ -1,0 +1,35 @@
+﻿  application.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: “APIENTRY”: 宏重定义
+C:\work place\computer_network_exp\demo\packages\nupengl.core.0.1.0.1\build\native\include\GLFW\glfw3.h(92,1): message : 参见“APIENTRY”的前一个定义
+C:\work place\computer_network_exp\demo\src\application.cpp(74,26): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(74,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(87,28): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(87,22): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(94,26): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(94,21): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(95,25): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(95,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(96,25): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(96,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(97,26): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(97,21): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(176,15): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work place\computer_network_exp\demo\src\application.cpp(181,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work place\computer_network_exp\demo\src\application.cpp(189,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work place\computer_network_exp\demo\src\application.cpp(206,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work place\computer_network_exp\demo\src\application.cpp(223,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work place\computer_network_exp\demo\src\application.cpp(242,25): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(242,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(243,26): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(243,17): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(244,29): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(244,24): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(244,17): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(245,28): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(245,23): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(245,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(267,36): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(267,30): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(267,24): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\work place\computer_network_exp\demo\src\application.cpp(267,18): warning C4305: “参数”: 从“double”到“GLclampf”截断
+  demo.vcxproj -> C:\work place\computer_network_exp\demo\x64\Debug\demo.exe
