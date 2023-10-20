@@ -211,8 +211,6 @@ void drawPinwheel()
     glVertex3f(0.05, -0.7, 0.1);
     glEnd();
 
-    glPopMatrix();
-
     //°´Å¥
     speedUpBtn->showButton(0,0,0,"Speed Up", -0.52,0.74,0.8, 0.7, -0.6, -0.3);
     reverseBtn->showButton(0, 0, 0, "Reverse",-0.06,0.74, 0.8, 0.7, -0.1, 0.1);
