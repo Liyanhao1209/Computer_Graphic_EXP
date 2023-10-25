@@ -1,0 +1,46 @@
+﻿  RacingCar.cpp
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(16,22): warning C4305: “初始化”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(75,15): warning C4305: “=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(87,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(87,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(97,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(97,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(105,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(105,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(114,39): warning C4305: “+=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(116,21): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(116,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(117,31): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(117,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(118,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(118,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(119,39): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(119,20): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(120,32): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(120,20): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(124,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(124,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(125,30): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(125,18): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(128,31): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(128,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(132,39): warning C4305: “+=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,21): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,32): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,33): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,20): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(137,40): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(137,20): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(138,39): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(138,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(142,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(142,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(143,31): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(143,18): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,32): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(284,19): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(348,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  RacingCar.vcxproj -> C:\workplace\Computer_Graphic_EXP\RacingCar\x64\Debug\RacingCar.exe
