@@ -1,0 +1,13 @@
+﻿  displayDemo.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: “APIENTRY”: 宏重定义
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\packages\nupengl.core.0.1.0.1\build\native\include\GLFW\glfw3.h(92,1): message : 参见“APIENTRY”的前一个定义
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(32,22): warning C4305: “初始化”: 从“double”到“float”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(59,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(59,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(69,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(69,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(77,20): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(77,15): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(219,22): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\work_place\computer_graphic_exp\demo\displayFuncDemo\displayDemo.cpp(255,15): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  displayFuncDemo.vcxproj -> C:\work_place\computer_graphic_exp\demo\displayFuncDemo\x64\Debug\displayFuncDemo.exe
