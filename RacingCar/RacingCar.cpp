@@ -35,7 +35,7 @@ float turnAngle = 0;
 float R = 0, G = 0.5, B = 0.5;
 
 GLfloat lightPos[] = { 25.0, 25.0, 25.0, 1.0 };
-GLfloat lookat[] = { 0.0, -10.0, 10.0 };
+GLfloat lookat[] = { 0.0, 0.0, 0.0 };
 GLfloat up[] = { 0.0, 0.0, 1.0 };
 GLdouble fovy = 60.0;
 GLdouble nearPlane = 1.0;
@@ -276,44 +276,34 @@ void draw_car() {
 
 }
 
-
-
-
 void drawObjects(GLboolean shadowRender) {
 	draw_track();
 	glPushMatrix();
-	glTranslatef(-my - 7.5, -mx, 0);
+	glTranslatef(mx - 7.5, my, 0); //初始位置:(-7.5,0,0) 随mx,my位置变化
 	glRotatef(turnAngle, 0, 0, 1);
 	draw_car();
-	glPushMatrix();
-	glTranslatef(lightPos[0], lightPos[1], lightPos[2]);
-	glColor3f(1, 1, 1);
-	glutWireSphere(0.5, 6, 6);
-	glPopMatrix();
 }
 
 
 void display(void) {
 	//计算物体的当前位移
-	mx -= v * cos(angle2Rad(-turnAngle));
-	my -= v * sin(angle2Rad(-turnAngle));
-	//计算新的摄像机的位置
-	GLfloat a = angle2Rad(cameraAnglex - 90);
-	GLfloat b = angle2Rad(270 - cameraAngley); 
-	GLfloat x = cameraDistance * translatex * cos(a) + cameraDistance * translatey * sin(b) * sin(a) + cameraDistance * cos(angle2Rad(cameraAnglex)) * sin(angle2Rad(cameraAngley));
-	GLfloat y = cameraDistance * translatey * cos(b) + cameraDistance * cos(angle2Rad(cameraAngley));
-	GLfloat z = cameraDistance * translatex * sin(a) - cameraDistance * translatey * cos(a) * sin(b) + cameraDistance * sin(angle2Rad(cameraAnglex)) * sin(angle2Rad(cameraAngley));
+	my += v * cos(angle2Rad(-turnAngle));
+	mx += v * sin(angle2Rad(-turnAngle));
+	//摄像机位置
+	GLfloat z = 40.0f;
+	GLfloat y = -20.0f;
+	GLfloat x = 0.0f;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glPushMatrix();
 	glLoadIdentity();
 	if (first_perspective) {
-		gluLookAt(-my - 7.5, -mx, 2.0,
-			-my - 7.5 + sin(angle2Rad(-turnAngle)), -mx + cos(angle2Rad(-turnAngle)), 2.0,
+		gluLookAt(mx - 7.5, my, 2.0,
+			mx - 7.5 + sin(angle2Rad(-turnAngle)), my + cos(angle2Rad(-turnAngle)) , 2.0,
 			up[0], up[1], up[2]);
 	}
 	else {
-		gluLookAt(z, y, x,
-			lookat[0], lookat[1], lookat[2],
+		gluLookAt(x, y, z,
+			mx-7.5,my,0.0,
 			up[0], up[1], up[2]);
 	}
 	drawObjects(GL_FALSE);
