@@ -303,7 +303,7 @@ void display(void) {
 	}
 	else {
 		gluLookAt(x, y, z,
-			mx-7.5,my,0.0,
+			0,0,0,
 			up[0], up[1], up[2]);
 	}
 	drawObjects(GL_FALSE);
