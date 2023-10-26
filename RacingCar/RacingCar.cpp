@@ -120,14 +120,6 @@ void draw_track() {
 		glVertex3f(-10.0 * cos(i), 8 + 10.0 * sin(i), hight);
 		glEnd();
 	}
-	glBegin(GL_QUADS);
-	glColor3f(1, 0.6, 0.2);
-	glVertex3f(-5.0 * cos(i), 8 + 5.0 * sin(i), hight);
-	glVertex3f(5.0, 8.0, hight);
-	glVertex3f(10.0, 8.0, hight);
-	glVertex3f(-10.0 * cos(i), 8 + 10.0 * sin(i), hight);
-
-	glEnd();
 
 	for (i = 0; i <= PI - 0.01; i += 0.01) {
 		glBegin(GL_QUADS);
@@ -138,13 +130,6 @@ void draw_track() {
 		glVertex3f(-5.0 * cos(i + 0.01), -8 - 5.0 * sin(i + 0.01), hight);
 		glEnd();
 	}
-	glBegin(GL_QUADS);
-	glColor3f(1, 0.6, 0.2);
-	glVertex3f(-5.0 * cos(i), -8 - 5.0 * sin(i), hight);
-	glVertex3f(-10.0 * cos(i), -8 - 10.0 * sin(i), hight);
-	glVertex3f(10.0, -8.0, hight);
-	glVertex3f(5.0, -8.0, hight);
-	glEnd();
 }
 
 void draw_car() {
@@ -163,7 +148,6 @@ void draw_car() {
 	glColor3f(R, G, B);
 	glVertex3f(-1.0f, 2.0f, 0.5f);
 	glVertex3f(-1.0f, 2.0f, 1.5f);
-	glColor3f(R, G, B);
 	glVertex3f(1.0f, 2.0f, 1.5f);
 	glVertex3f(1.0f, 2.0f, 0.5f);
 	glEnd();
@@ -172,7 +156,6 @@ void draw_car() {
 	glColor3f(R, G, B);
 	glVertex3f(-1.0f, -2.0f, 1.5f);
 	glVertex3f(-1.0f, -2.0f, 0.5f);
-	glColor3f(R, G, B);
 	glVertex3f(1.0f, -2.0f, 0.5f);
 	glVertex3f(1.0f, -2.0f, 1.5f);
 	glEnd();
@@ -181,7 +164,6 @@ void draw_car() {
 	glColor3f(R, G, B);
 	glVertex3f(-1.0f, 2.0f, 1.5f);
 	glVertex3f(-1.0f, 2.0f, 0.5f);
-	glColor3f(R, G, B);
 	glVertex3f(-1.0f, -2.0f, 0.5f);
 	glVertex3f(-1.0f, -2.0f, 1.5f);
 	glEnd();
@@ -190,7 +172,6 @@ void draw_car() {
 	glColor3f(R, G, B);
 	glVertex3f(1.0f, 2.0f, 0.5f);
 	glVertex3f(1.0f, 2.0f, 1.5f);
-	glColor3f(R, G, B);
 	glVertex3f(1.0f, -2.0f, 1.5f);
 	glVertex3f(1.0f, -2.0f, 0.5f);
 	glEnd();
@@ -251,6 +232,8 @@ void draw_car() {
 	glVertex3f(1.0f, -1.2f, 1.5f);
 	glEnd();
 
+
+
 	//车轮	
 	glColor3f(0, 0, 0);
 
@@ -273,6 +256,7 @@ void draw_car() {
 	glutSolidTorus(0.1, 0.25, 5, 100);
 
 	glPopMatrix();
+
 }
 
 
@@ -302,7 +286,6 @@ void display(void) {
 	GLfloat x = cameraDistance * translatex * cos(a) + cameraDistance * translatey * sin(b) * sin(a) + cameraDistance * cos(angle2Rad(cameraAnglex)) * sin(angle2Rad(cameraAngley));
 	GLfloat y = cameraDistance * translatey * cos(b) + cameraDistance * cos(angle2Rad(cameraAngley));
 	GLfloat z = cameraDistance * translatex * sin(a) - cameraDistance * translatey * cos(a) * sin(b) + cameraDistance * sin(angle2Rad(cameraAnglex)) * sin(angle2Rad(cameraAngley));
-	GLfloat  radius = 30;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glPushMatrix();
 	glLoadIdentity();
