@@ -80,55 +80,74 @@ void keyboard(unsigned char key, int x, int y)
 	glutPostRedisplay();
 }
 
+void draw_Facets(
+	float RED,float GREEN,float BLUE,
+	GLenum strategy,
+	float cors[][3], int length
+	) 
+{
+	glColor3f(RED,GREEN,BLUE);
+	glBegin(strategy);
+	for (int i = 0; i < length; i++) {
+		glVertex3f(cors[i][0], cors[i][1], cors[i][2]);
+	}
+	glEnd();
+}
+
 void draw_track() {
-	float hight = 0.001f;
+	float height = 0.001f;
 	//绘制地面
 	glNormal3f(0, 0, 1);
-	glColor3f(0, 0.6, 0.2);
-	glBegin(GL_QUADS);
-	glVertex3f(-20.0f, -20.0f, 0);
-	glVertex3f(20.0f, -20.0f, 0);
-	glVertex3f(20.0f, 20.0f, 0);
-	glVertex3f(-20.0f, 20.0f, 0);
-	glEnd();
+	float corsGround[4][3] = {
+		{-20.0f, -20.0f, 0},
+		{20.0f, -20.0f, 0},
+		{20.0f, 20.0f, 0},
+		{-20.0f, 20.0f, 0}
+	}; 
+	draw_Facets(0, 0.6, 0.2, GL_QUADS,
+			corsGround , 4);
 
 	//跑道的直线部分：
-	glBegin(GL_QUADS);
-	glColor3f(1, 0.6, 0.2);
-	glVertex3f(-10.0f, -8.0f, hight);
-	glVertex3f(-5.0f, -8.0f, hight);
-	glVertex3f(-5.0f, 8.0f, hight);
-	glVertex3f(-10.0f, 8.0f, hight);
-	glEnd();
-
-	glBegin(GL_QUADS);
-	glColor3f(1, 0.6, 0.2);
-	glVertex3f(10.0f, -8.0f, hight);
-	glVertex3f(10.0f, 8.0f, hight);
-	glVertex3f(5.0f, 8.0f, hight);
-	glVertex3f(5.0f, -8.0f, hight);
-	glEnd();
+	float corsLeftRide[4][3] = {
+		{-10.0f, -8.0f, height},
+		{-5.0f, -8.0f, height},
+		{-5.0f, 8.0f, height},
+		{-10.0f, 8.0f, height}
+	};
+	draw_Facets(1, 0.6, 0.2, GL_QUADS,
+		corsLeftRide, 4);
+	
+	float corsRightRide[4][3] = {
+		{10.0f, -8.0f, height},
+		{10.0f, 8.0f, height},
+		{5.0f, 8.0f, height},
+		{5.0f, -8.0f, height}
+	};
+	draw_Facets(1, 0.6, 0.2, GL_QUADS,
+		corsRightRide, 4);
 
 	//跑道的圆环部分：
 	float i;
 	for (i = 0; i <= PI - 0.01; i += 0.01) {
-		glBegin(GL_QUADS);
-		glColor3f(1, 0.6, 0.2);
-		glVertex3f(-5.0 * cos(i), 8 + 5.0 * sin(i), hight);
-		glVertex3f(-5.0 * cos(i + 0.01), 8 + 5.0 * sin(i + 0.01), hight);
-		glVertex3f(-10.0 * cos(i + 0.01), 8 + 10.0 * sin(i + 0.01), hight);
-		glVertex3f(-10.0 * cos(i), 8 + 10.0 * sin(i), hight);
-		glEnd();
+		float corsUpperRing[4][3] = {
+			{-5.0 * cos(i), 8 + 5.0 * sin(i), height},
+			{-5.0 * cos(i + 0.01), 8 + 5.0 * sin(i + 0.01), height},
+			{-10.0 * cos(i + 0.01), 8 + 10.0 * sin(i + 0.01), height},
+			{-10.0 * cos(i), 8 + 10.0 * sin(i), height}
+		};
+		draw_Facets(1, 0.6, 0.2, GL_QUADS,
+			corsUpperRing,4);
 	}
 
 	for (i = 0; i <= PI - 0.01; i += 0.01) {
-		glBegin(GL_QUADS);
-		glColor3f(1, 0.6, 0.2);
-		glVertex3f(-5.0 * cos(i), -8 - 5.0 * sin(i), hight);
-		glVertex3f(-10.0 * cos(i), -8 - 10.0 * sin(i), hight);
-		glVertex3f(-10.0 * cos(i + 0.01), -8 - 10.0 * sin(i + 0.01), hight);
-		glVertex3f(-5.0 * cos(i + 0.01), -8 - 5.0 * sin(i + 0.01), hight);
-		glEnd();
+		float corsLowerRing[4][3] = {
+			{-5.0 * cos(i), -8 - 5.0 * sin(i), height},
+			{-10.0 * cos(i), -8 - 10.0 * sin(i), height},
+			{-10.0 * cos(i + 0.01), -8 - 10.0 * sin(i + 0.01), height},
+			{-5.0 * cos(i + 0.01), -8 - 5.0 * sin(i + 0.01), height}
+		};
+		draw_Facets(1, 0.6, 0.2, GL_QUADS,
+			corsLowerRing, 4);
 	}
 }
 
@@ -231,8 +250,6 @@ void draw_car() {
 	glVertex3f(1.0f, -1.2f, 2.5f);
 	glVertex3f(1.0f, -1.2f, 1.5f);
 	glEnd();
-
-
 
 	//车轮	
 	glColor3f(0, 0, 0);
